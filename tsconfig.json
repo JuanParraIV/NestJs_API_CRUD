@@ -1,0 +1,50 @@
+/* This configuration ensures that your project is built with strict type checking and produces high-quality JavaScript code. It also includes options for generating .d.ts files, which are useful for package publishing and type definition purposes. */
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*":["./src/*"]
+    },
+    "module": "commonjs",
+    "target": "es2017",
+    "lib": ["es2017"],
+    "declaration": true,
+    "declarationDir": "./dist",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
+/* Here is a brief explanation of each option:
+
+module: specifies the module format to use. commonjs is used in NestJS projects.
+target: specifies the ECMAScript version to target. es2017 is used to support async/await and other modern language features.
+lib: specifies the default library files to include in the project. es2017 is used to include typings for modern language features.
+declaration: enables the generation of .d.ts files for the project.
+declarationDir: specifies the output directory for generated .d.ts files.
+esModuleInterop: enables interoperability between CommonJS and ES Modules.
+experimentalDecorators: enables the use of experimental TypeScript decorators.
+emitDecoratorMetadata: enables the emission of design-type metadata for decorators.
+sourceMap: generates source map files for debugging.
+outDir: specifies the output directory for compiled JavaScript files.
+rootDir: specifies the root directory for TypeScript source files.
+baseUrl: specifies the base URL for resolving modules.
+strict: enables strict type checking options.
+noImplicitAny: disallows implicit any types.
+noImplicitThis: disallows the use of this in contexts where the type is any.
+noImplicitReturns: disallows control flow statements that do not explicitly return a value.
+noUnusedLocals: disallows unused local variables.
+noUnusedParameters: disallows unused function parameters.
+forceConsistentCasingInFileNames: enforces consistent casing in file names. */
